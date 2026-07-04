@@ -80,7 +80,9 @@ class User {
    
   
     return {
-      email: userData.email
+      email: userData.email,
+      name: userData.username,
+      id:user.docs[0].id
     };
   }
   static async updateLastLogin(email) {
