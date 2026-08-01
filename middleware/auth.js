@@ -25,7 +25,7 @@ function authenticate(req, res, next) {
       algorithms: ['HS256'],
       maxAge: JWT_EXPIRES_IN,
     });
-    req.user = { id: decoded.id, email: decoded.email };
+    req.user = { id: decoded.id, email: decoded.email ,role: decoded.role || 'user' };
     next();
   } catch (err) {
     if (err.name === 'TokenExpiredError') {
