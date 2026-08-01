@@ -77,13 +77,12 @@ class User {
       throw err;
     }
   
-   
-  
     return {
       email: userData.email,
       name: userData.username,
-      id:user.docs[0].id,
       role: userData.role || 'user',
+      id:user.docs[0].id
+      
     };
   }
   static async updateLastLogin(email) {
