@@ -12,6 +12,7 @@ const commodityTradeRoutes = require('./routes/commodityTrade.routes');
 const verificationRoutes = require('./routes/verification.routes');
 const marketDataRoutes = require('./routes/marketData.routes');
 const forexTradeRoutes = require('./routes/forexTrade.routes');
+const adminRoutes = require('./routes/admin.routes');
 
 
 const app = express();
@@ -48,6 +49,7 @@ app.use('/api/commodity-trade', commodityTradeRoutes);
 app.use('/api/verification', verificationRoutes);
 app.use('/api/market-data', marketDataRoutes);
 app.use('/api/forex-trade', forexTradeRoutes);
+app.use('/api/admin', adminRoutes);
 
 // 404 Handler
 app.use((req, res) => {
